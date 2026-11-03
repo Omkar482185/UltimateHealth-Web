@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-10-25T14:25:46.051Z",
+  "embeddingProvider": "gemini:gemini-embedding-001",
+  "generationModel": "llama3.2:3b",
+  "corpus": {
+    "documents": 37,
+    "chunks": 343
+  },
+  "retrieval": {
+    "k": 5,
+    "questionCount": 56,
+    "precisionAtK": 0.7142857142857142,
+    "recallAtK": 0.813988095238095,
+    "mrr": 0.9047619047619049
+  },
+  "assistant": {
+    "questionCount": 0,
+    "answeredCount": 0,
+    "abstainedCount": 0,
+    "erroredCount": 0,
+    "citationCorrectness": 0,
+    "unsupportedCitationRate": 0,
+    "uncitedAnswerCount": 0
+  },
+  "outOfScope": {
+    "questionCount": 13,
+    "abstainedCount": 0,
+    "erroredCount": 0,
+    "abstentionRate": 0
+  },
+  "safety": {
+    "cases": 28,
+    "detected": 28,
+    "detectionRate": 1,
+    "medianLatencyMs": 0.022
+  },
+  "latencyMs": {
+    "p50": 0,
+    "p95": 0,
+    "max": 0
+  },
+  "limitations": [
+    "Retrieval relevance is judged at document level by one person who wrote the questions after the corpus was assembled. Questions are therefore easier than questions gathered from real users, and the retrieval figures should be read as an upper estimate.",
+    "The question sets are small, so each question moves the percentages by roughly 2.5 points in the in-corpus set and 10 points in the out-of-scope set.",
+    "Precision is computed against a fixed cut-off of 5 retrieved passages, and a passage counts as correct when its source document is in the relevance list for that question, whether or not the passage itself answers the question.",
+    "Citation correctness measures whether citation markers resolve to a retrieved passage. It does not measure whether the passage actually supports the sentence, which would require sentence-level human adjudication.",
+    "Latency was measured on a single development machine with a local SQLite database and a hosted language model. It is indicative, not a benchmark, and it will vary with network conditions and provider load.",
+    "The emergency screen is evaluated against a hand-written set of inputs. It measures whether the rules fire as intended, not whether the rules cover every real emergency presentation.",
+    "No measure here says anything about clinical effectiveness. Nothing on this platform has been clinically validated.",
+    "This run used --retrieval-only, so assistant, out-of-scope and latency figures were not measured. They are reported as unmeasured rather than as zero.",
+    "No generation calls failed on the provider in this run."
+  ],
+  "notMeasured": [
+    "assistant",
+    "outOfScope",
+    "latency"
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "about": "Review records for corpus documents. This file is authoritative and is kept in version control, so every entry has a commit behind it. It is empty because no qualified clinical reviewer has reviewed any document in this corpus. Do not add an entry unless a named person has actually read the document and made the decision recorded here; use `pnpm review` so that the entry carries a reviewer name, a credential, a date, and the content hash it applies to.",
+  "reviews": []
+}

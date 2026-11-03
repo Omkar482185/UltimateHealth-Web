@@ -1,0 +1,46 @@
+{
+  "name": "website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "ingest": "tsx scripts/ingest.ts",
+    "retrieval-check": "tsx scripts/retrieval-check.ts",
+    "verify": "tsx scripts/verify-unit.ts && tsx scripts/verify-auth.ts",
+    "verify:auth": "tsx scripts/verify-auth.ts",
+    "check:accounts": "node scripts/check-accounts.mjs",
+    "check:guidance": "node scripts/check-guidance.mjs",
+    "check:security": "node scripts/check-security.mjs",
+    "check:podcasts": "tsx scripts/check-podcasts.ts",
+    "check:account-features": "node scripts/check-account-features.mjs",
+    "check:assistant": "node scripts/check-assistant.mjs",
+    "check:community": "node scripts/check-community.mjs",
+    "check:ollama": "tsx scripts/check-ollama.ts",
+    "check:ui": "node scripts/check-ui.mjs",
+    "review": "tsx scripts/review.ts",
+    "verify:gemini": "tsx scripts/doctor.ts",
+    "eval": "tsx scripts/eval.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^2.28.0",
+    "better-sqlite3": "11.10.0",
+    "cheerio": "^1.2.0",
+    "next": "16.4.0",
+    "pdf-lib": "^1.17.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@12.10.1"
+}
